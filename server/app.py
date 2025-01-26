@@ -26,7 +26,7 @@ def index():
 class Restaurants(Resource):
     def get(self):
         restaurant = [restaurant.to_dict() for restaurant in Restaurant.query.all()]
-        return make_response(restaurant, 201)
+        return make_response(restaurant, 200)
 
 api.add_resource(Restaurants, '/restaurants')
 
